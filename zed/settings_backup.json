@@ -7,15 +7,8 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-  "go_to_definition_fallback": "none",
-  "agent_servers": {
-    "claude": {
-      "default_mode": "plan"
-    }
-  },
   "agent": {
-    "always_allow_tool_actions": true,
-    "default_profile": "write",
+    "default_profile": "ask",
     "model_parameters": []
   },
   "buffer_font_size": 14,
@@ -56,5 +49,5 @@
       }
     }
   },
-  "relative_line_numbers": "enabled"
+  "relative_line_numbers": true
 }

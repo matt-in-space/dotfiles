@@ -1,0 +1,11 @@
+{
+  "asynchronous act": {
+    "prefix": "asa",
+    "body": [
+      "await act(async () => {",
+      "\t$0",
+      "});"
+    ],
+    "description": "Asynchronous act wrapper for testing"
+  }
+}

@@ -1,48 +1,61 @@
 return {
-	{
-		"williamboman/mason.nvim",
-		opts = {},
-	},
-	{
-		"williamboman/mason-lspconfig.nvim",
-		opts = {
-			ensure_installed = { "elixirls", "emmet_language_server", "lua_ls", "rust_analyzer", "ts_ls" },
-		},
-	},
-	{
-		"neovim/nvim-lspconfig",
-		config = function()
-			local lspconfig = require("lspconfig")
-			local capabilities = require("cmp_nvim_lsp").default_capabilities()
+    {
+        "williamboman/mason.nvim",
+        opts = {},
+    },
+    {
+        "williamboman/mason-lspconfig.nvim",
+        opts = {
+            ensure_installed = { "elixirls", "emmet_language_server", "lua_ls", "rust_analyzer", "ts_ls" },
+        },
+    },
+    {
+        "neovim/nvim-lspconfig",
+        config = function()
+            local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-			lspconfig.elixirls.setup({
-				capabilities = capabilities,
-				cmd = { vim.fn.stdpath("data") .. "/mason/packages/elixir-ls/language_server.sh" },
-			})
+            -- Configure servers using the new vim.lsp.config API
+            vim.lsp.config('elixirls', {
+                capabilities = capabilities,
+                cmd = { vim.fn.stdpath("data") .. "/mason/packages/elixir-ls/language_server.sh" },
+            })
 
-			lspconfig.emmet_language_server.setup({
-				capabilities = capabilities,
-				filetypes = { "html", "css", "javascript", "typescript", "javascriptreact", "typescriptreact", "heex", "svelte" },
-			})
+            vim.lsp.config('emmet_language_server', {
+                capabilities = capabilities,
+                filetypes = { "html", "css", "javascript", "typescript", "javascriptreact", "typescriptreact", "heex", "svelte" },
+            })
 
-			lspconfig.lua_ls.setup({
-				capabilities = capabilities,
-				settings = {
-					Lua = {
-						diagnostics = {
-							globals = { "vim" },
-						},
-					},
-				},
-			})
+            vim.lsp.config('lua_ls', {
+                capabilities = capabilities,
+                settings = {
+                    Lua = {
+                        runtime = {
+                            version = 'LuaJIT',
+                        },
+                        diagnostics = {
+                            globals = { "vim" },
+                        },
+                        workspace = {
+                            library = vim.api.nvim_get_runtime_file("", true),
+                            checkThirdParty = false,
+                        },
+                        telemetry = {
+                            enable = false,
+                        },
+                    },
+                },
+            })
 
-			lspconfig.rust_analyzer.setup({
-				capabilities = capabilities,
-			})
+            vim.lsp.config('rust_analyzer', {
+                capabilities = capabilities,
+            })
 
-			lspconfig.ts_ls.setup({
-				capabilities = capabilities,
-			})
-		end,
-	},
+            vim.lsp.config('ts_ls', {
+                capabilities = capabilities,
+            })
+
+            -- Enable all configured servers
+            vim.lsp.enable({ 'elixirls', 'emmet_language_server', 'lua_ls', 'rust_analyzer', 'ts_ls' })
+        end,
+    },
 }
