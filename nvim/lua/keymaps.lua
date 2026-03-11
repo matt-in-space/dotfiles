@@ -11,6 +11,7 @@ vim.keymap.set("n", "<leader>fh", telescope.help_tags, {})
 -- File browsing
 vim.keymap.set("n", "<leader>fn", ":Telescope file_browser<CR>")
 vim.keymap.set("n", "<leader>fm", ":Telescope file_browser path=%:p:h select_buffer=true<CR>")
+vim.keymap.set("n", "<leader>fw", ":Telescope workspaces<CR>")
 
 -- LSP commands
 vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
@@ -26,7 +27,14 @@ vim.keymap.set("n", "<leader>ge", ":e#<CR>")
 -- Git control
 vim.keymap.set("n", "<leader>gh", ":Gitsigns preview_hunk<CR>")
 vim.keymap.set("n", "<leader>gl", ":Gitsigns toggle_current_line_blame<CR>")
-vim.keymap.set("n", "<leader>gv", ":DiffviewOpen<CR>")
+vim.keymap.set("n", "<leader>gv", function()
+	local lib = require("diffview.lib")
+	if lib.get_current_view() then
+		vim.cmd("DiffviewClose")
+	else
+		vim.cmd("DiffviewOpen")
+	end
+end)
 
 -- Window navigation
 vim.keymap.set("n", "<leader>ml", "<C-W>l")
