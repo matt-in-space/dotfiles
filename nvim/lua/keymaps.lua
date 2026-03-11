@@ -26,6 +26,7 @@ vim.keymap.set("n", "<leader>ge", ":e#<CR>")
 -- Git control
 vim.keymap.set("n", "<leader>gh", ":Gitsigns preview_hunk<CR>")
 vim.keymap.set("n", "<leader>gl", ":Gitsigns toggle_current_line_blame<CR>")
+vim.keymap.set("n", "<leader>gv", ":DiffviewOpen<CR>")
 
 -- Window navigation
 vim.keymap.set("n", "<leader>ml", "<C-W>l")
