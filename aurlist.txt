@@ -1,0 +1,5 @@
+claude-code
+paru
+paru-debug
+spotify
+yazi-git
