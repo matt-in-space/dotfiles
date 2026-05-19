@@ -29,6 +29,8 @@ hl.monitor({
 hl.on("hyprland.start", function()
 	hl.exec_cmd(notifier)
 	hl.exec_cmd(statusBar)
+	hl.exec_cmd("awww-daemon")
+	hl.exec_cmd("$HOME/.config/awww/wallpaper.sh")
 end)
 
 ----------------------
@@ -48,6 +50,7 @@ hl.bind(mainMod .. " + X", hl.dsp.exec_cmd(terminal))
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(browser))
 hl.bind(mainMod .. " + F", hl.dsp.exec_cmd("alacritty -e yazi"))
 hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd("wofi --show drun"))
+hl.bind(mainMod .. " + W", hl.dsp.exec_cmd("$HOME/.config/awww/wallpaper.sh"))
 
 -- Screen focus
 hl.bind(mainMod .. " + H", hl.dsp.focus({ direction = "left" }))
