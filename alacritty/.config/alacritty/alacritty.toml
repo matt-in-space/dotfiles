@@ -34,6 +34,7 @@ size = 14
 
 [window]
 option_as_alt = "OnlyRight"
+opacity = 0.9
 
 [[keyboard.bindings]]
 key = "Return"

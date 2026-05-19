@@ -82,8 +82,9 @@ hl.config({
 		border_size      = 2,
 
 		col              = {
-			active_border   = { colors = { "rgba(33ccffee)", "rgba(00ff99ee)" }, angle = 45 },
-			inactive_border = "rgba(595959aa)",
+			-- Tokyo Night: blue -> purple gradient active, muted highlight inactive
+			active_border   = { colors = { "rgba(7aa2f7ee)", "rgba(bb9af7ee)" }, angle = 45 },
+			inactive_border = "rgba(292e42aa)",
 		},
 
 		-- Set to true to enable resizing windows by clicking and dragging on borders and gaps
@@ -107,7 +108,7 @@ hl.config({
 			enabled      = true,
 			range        = 4,
 			render_power = 3,
-			color        = 0xee1a1a1a,
+			color        = 0xee16161e,
 		},
 
 		blur             = {
@@ -122,3 +123,10 @@ hl.config({
 		enabled = true,
 	},
 })
+
+-----------------
+---- RULES ----
+-----------------
+
+-- Frosted-glass Waybar (pairs with the slightly transparent bar background)
+hl.layer_rule({ match = { namespace = "waybar" }, blur = true })
