@@ -1,0 +1,99 @@
+# Starship — Tokyo Night, two-line prompt, Nerd Font icons.
+"$schema" = 'https://starship.rs/config-schema.json'
+
+add_newline = true
+
+format = """
+$directory$git_branch$git_status$cmd_duration
+$character"""
+
+palette = 'tokyo_night'
+
+[palettes.tokyo_night]
+fg      = '#c0caf5'
+fg_dark = '#a9b1d6'
+blue    = '#7aa2f7'
+cyan    = '#7dcfff'
+green   = '#9ece6a'
+purple  = '#bb9af7'
+red     = '#f7768e'
+orange  = '#ff9e64'
+yellow  = '#e0af68'
+grey    = '#565f89'
+
+[character]
+success_symbol = '[➜](bold green)'
+error_symbol   = '[➜](bold red)'
+
+[directory]
+style = 'bold blue'
+truncation_length = 3
+truncation_symbol = '…/'
+read_only = ' '
+home_symbol = ' ~'
+
+[directory.substitutions]
+"Documents" = '󰈙'
+"Downloads" = ''
+"Music"     = ''
+"Pictures"  = ''
+"dotfiles"  = ''
+
+[git_branch]
+symbol = ' '
+style  = 'purple'
+format = ' [$symbol$branch]($style)'
+
+[git_status]
+style  = 'red'
+format = ' [$all_status$ahead_behind]($style)'
+conflicted = '='
+ahead      = '⇡${count}'
+behind     = '⇣${count}'
+diverged   = '⇕⇡${ahead_count}⇣${behind_count}'
+up_to_date = ''
+untracked  = '?${count}'
+stashed    = '\$'
+modified   = '!${count}'
+staged     = '+${count}'
+renamed    = '»${count}'
+deleted    = '✘${count}'
+
+[cmd_duration]
+min_time = 500
+style    = 'yellow'
+format   = ' [took $duration]($style)'
+
+# Language modules — only show when the directory contains that language.
+[elixir]
+symbol = ' '
+style  = 'purple'
+format = ' [$symbol$version \\(OTP $otp_version\\)]($style)'
+
+[nodejs]
+symbol = ' '
+style  = 'green'
+format = ' [$symbol$version]($style)'
+
+[python]
+symbol = ' '
+style  = 'yellow'
+format = ' [$symbol$version]($style)'
+
+[rust]
+symbol = ' '
+style  = 'orange'
+format = ' [$symbol$version]($style)'
+
+[golang]
+symbol = ' '
+style  = 'cyan'
+format = ' [$symbol$version]($style)'
+
+[lua]
+symbol = ' '
+style  = 'blue'
+format = ' [$symbol$version]($style)'
+
+[package]
+disabled = true

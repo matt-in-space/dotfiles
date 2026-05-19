@@ -71,7 +71,7 @@ hl.bind(mainMod .. " + bracketleft", hl.dsp.focus({ workspace = "e-1" }))
 hl.bind(mainMod .. " + bracketright", hl.dsp.focus({ workspace = "e+1" }))
 
 -- Mouse controls
-hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag(), { mouse = true })
+hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag(),   { mouse = true })
 hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
 
 -----------------------
@@ -134,3 +134,11 @@ hl.config({
 
 -- Frosted-glass Waybar (pairs with the slightly transparent bar background)
 hl.layer_rule({ match = { namespace = "waybar" }, blur = true })
+
+-- Steam dialogs (Friends List, Sign in, Settings, Steam Guard, news popups…)
+-- float and center. The main library window (title "Steam") is forced back to
+-- tiled by the third rule — Hyprland's regex engine has flaky lookahead
+-- support, so this two-rule pattern is more reliable than negative matching.
+hl.window_rule({ match = { class = "^(steam)$" }, float = true })
+hl.window_rule({ match = { class = "^(steam)$" }, center = true })
+hl.window_rule({ match = { class = "^(steam)$", title = "^Steam$" }, tile = true })
