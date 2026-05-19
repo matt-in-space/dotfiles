@@ -30,7 +30,12 @@ white = '#acb0d0'
 
 [font]
 normal = { family = "Hack Nerd Font Mono", style = "Regular" }
-size = 16
+size = 14
 
 [window]
 option_as_alt = "OnlyRight"
+
+[[keyboard.bindings]]
+key = "Return"
+mods = "Shift"
+chars = "\u001B\r"
