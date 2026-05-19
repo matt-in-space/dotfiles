@@ -53,6 +53,13 @@ hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd("wofi --show drun"))
 hl.bind(mainMod .. " + W", hl.dsp.exec_cmd("$HOME/.config/awww/wallpaper.sh"))
 hl.bind(mainMod .. " + ESCAPE", hl.dsp.exec_cmd("loginctl lock-session"))
 
+-- Screenshots
+local shot = "$HOME/.config/screenshot/screenshot.sh"
+hl.bind("Print",            hl.dsp.exec_cmd(shot .. " region-copy"))
+hl.bind("SHIFT + Print",    hl.dsp.exec_cmd(shot .. " region-edit"))
+hl.bind(mainMod .. " + Print",  hl.dsp.exec_cmd(shot .. " window"))
+hl.bind("CTRL + Print",     hl.dsp.exec_cmd(shot .. " full"))
+
 -- Screen focus
 hl.bind(mainMod .. " + H", hl.dsp.focus({ direction = "left" }))
 hl.bind(mainMod .. " + L", hl.dsp.focus({ direction = "right" }))
@@ -142,3 +149,7 @@ hl.layer_rule({ match = { namespace = "waybar" }, blur = true })
 hl.window_rule({ match = { class = "^(steam)$" }, float = true })
 hl.window_rule({ match = { class = "^(steam)$" }, center = true })
 hl.window_rule({ match = { class = "^(steam)$", title = "^Steam$" }, tile = true })
+
+-- satty (screenshot annotator) — should always float and center.
+hl.window_rule({ match = { class = "^(com\\.gabm\\.satty)$" }, float = true })
+hl.window_rule({ match = { class = "^(com\\.gabm\\.satty)$" }, center = true })
