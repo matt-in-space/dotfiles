@@ -44,8 +44,10 @@ window {
 
 #entry {
     padding: 8px 12px;
+    min-height: 28px;
+    border: 2px solid transparent;
     border-radius: 9px;
-    transition: all 0.2s ease;
+    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 }
 
 #entry:hover {
@@ -53,8 +55,9 @@ window {
 }
 
 #entry:selected {
-    background: linear-gradient(90deg, #7aa2f7, #7dcfff);
-    color: #1a1b26;
+    background-color: #283457;
+    border-color: #7aa2f7;
+    color: #c0caf5;
 }
 
 #text {
@@ -63,7 +66,7 @@ window {
 }
 
 #entry:selected #text {
-    color: #1a1b26;
+    color: #c0caf5;
 }
 
 #img {

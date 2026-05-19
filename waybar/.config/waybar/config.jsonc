@@ -5,8 +5,8 @@
     "layer": "top",
     "position": "top",
     "mod": "dock",
-    "margin-left": 10,
-    "margin-right": 10,
+    "margin-left": 14,
+    "margin-right": 14,
     "margin-top": 7,
     "margin-bottom": 0,
     "exclusive": true,
@@ -35,6 +35,7 @@
     },
 
     "mpris": {
+        "interval": 1,
         "format": "{player_icon} {dynamic}",
         "format-paused": "<span color='grey'>{status_icon} {dynamic}</span>",
         "max-length": 50,
