@@ -1,0 +1,71 @@
+/* Tokyo Night — matched to Waybar (Hack Nerd Font, 10px radius, subtle border) */
+
+* {
+    font-family: "Hack Nerd Font", "Font Awesome 6 Free";
+    font-weight: bold;
+    font-size: 15px;
+}
+
+window {
+    background-color: #1a1b26;
+    border: 3px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    color: #c0caf5;
+}
+
+#outer-box {
+    margin: 16px;
+}
+
+#input {
+    margin-bottom: 12px;
+    padding: 10px 14px;
+    border: 2px solid #292e42;
+    border-radius: 9px;
+    background-color: #16161e;
+    color: #c0caf5;
+}
+
+#input:focus {
+    border-color: #7aa2f7;
+}
+
+#input image {
+    color: #565f89;
+}
+
+#scroll {
+    margin: 0;
+}
+
+#inner-box {
+    margin: 0;
+}
+
+#entry {
+    padding: 8px 12px;
+    border-radius: 9px;
+    transition: all 0.2s ease;
+}
+
+#entry:hover {
+    background-color: #292e42;
+}
+
+#entry:selected {
+    background: linear-gradient(90deg, #7aa2f7, #7dcfff);
+    color: #1a1b26;
+}
+
+#text {
+    color: #c0caf5;
+    margin-left: 6px;
+}
+
+#entry:selected #text {
+    color: #1a1b26;
+}
+
+#img {
+    margin-right: 8px;
+}
