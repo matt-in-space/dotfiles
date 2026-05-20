@@ -31,6 +31,7 @@ hl.on("hyprland.start", function()
 	hl.exec_cmd("$HOME/.config/awww/wallpaper.sh")
 	hl.exec_cmd("hypridle")
 	hl.exec_cmd("systemctl --user start hyprpolkitagent")
+	hl.exec_cmd("blueman-applet")
 end)
 
 ----------------------
@@ -153,3 +154,7 @@ hl.window_rule({ match = { class = "^(steam)$", title = "^Steam$" }, tile = true
 -- satty (screenshot annotator) — should always float and center.
 hl.window_rule({ match = { class = "^(com\\.gabm\\.satty)$" }, float = true })
 hl.window_rule({ match = { class = "^(com\\.gabm\\.satty)$" }, center = true })
+
+-- blueman-manager (Bluetooth Devices) — float and center.
+hl.window_rule({ match = { class = "^(blueman-manager)$" }, float = true })
+hl.window_rule({ match = { class = "^(blueman-manager)$" }, center = true })

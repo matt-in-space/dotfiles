@@ -3,6 +3,9 @@ alacritty
 awww
 base
 base-devel
+blueman
+bluez
+bluez-utils
 cliphist
 fd
 firefox
