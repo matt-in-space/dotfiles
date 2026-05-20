@@ -27,8 +27,10 @@ error_symbol   = '[➜](bold red)'
 
 [directory]
 style = 'bold blue'
-truncation_length = 3
+truncation_length = 8           # show up to 8 path components
+truncate_to_repo = false        # don't hide the parent path when inside a git repo
 truncation_symbol = '…/'
+fish_style_pwd_dir_length = 1   # abbreviate intermediate dirs to 1 char
 read_only = ' '
 home_symbol = ' ~'
 
