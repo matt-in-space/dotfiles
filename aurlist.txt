@@ -1,4 +1,6 @@
+bibata-cursor-theme-bin
 claude-code
+gtk-engine-murrine
 paru
 paru-debug
 spotify

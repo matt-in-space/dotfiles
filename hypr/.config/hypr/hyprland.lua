@@ -20,6 +20,16 @@ hl.monitor({
 	scale    = "auto",
 })
 
+-------------
+---- ENV ----
+-------------
+
+-- Cursor: Bibata Modern Classic for both Xcursor and Hyprland's hyprcursor.
+hl.env("XCURSOR_THEME",    "Bibata-Modern-Classic")
+hl.env("XCURSOR_SIZE",     "24")
+hl.env("HYPRCURSOR_THEME", "Bibata-Modern-Classic")
+hl.env("HYPRCURSOR_SIZE",  "24")
+
 -------------------
 ---- AUTOSTART ----
 -------------------

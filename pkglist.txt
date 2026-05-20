@@ -13,6 +13,7 @@ fish
 fzf
 git
 github-cli
+gnome-themes-extra
 grim
 hypridle
 hyprland
@@ -31,12 +32,14 @@ neovim
 networkmanager
 noto-fonts
 openssh
+papirus-icon-theme
 pavucontrol
 pipewire-alsa
 pipewire-pulse
 poppler
 resvg
 ripgrep
+sassc
 satty
 slurp
 starship
