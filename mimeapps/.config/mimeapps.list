@@ -1,0 +1,41 @@
+[Default Applications]
+# Custom URL scheme handlers
+x-scheme-handler/claude-cli=claude-code-url-handler.desktop
+
+# Images — imv
+image/png=imv.desktop
+image/jpeg=imv.desktop
+image/gif=imv.desktop
+image/webp=imv.desktop
+image/bmp=imv.desktop
+image/tiff=imv.desktop
+image/x-portable-pixmap=imv.desktop
+image/svg+xml=imv.desktop
+image/heif=imv.desktop
+image/heic=imv.desktop
+image/avif=imv.desktop
+image/jxl=imv.desktop
+
+# Video — mpv
+video/mp4=mpv.desktop
+video/x-matroska=mpv.desktop
+video/webm=mpv.desktop
+video/x-msvideo=mpv.desktop
+video/quicktime=mpv.desktop
+video/mpeg=mpv.desktop
+video/x-flv=mpv.desktop
+video/3gpp=mpv.desktop
+video/ogg=mpv.desktop
+
+# Audio — mpv
+audio/mpeg=mpv.desktop
+audio/flac=mpv.desktop
+audio/ogg=mpv.desktop
+audio/wav=mpv.desktop
+audio/x-wav=mpv.desktop
+audio/aac=mpv.desktop
+audio/mp4=mpv.desktop
+audio/x-m4a=mpv.desktop
+audio/opus=mpv.desktop
+audio/x-vorbis+ogg=mpv.desktop
+audio/x-flac=mpv.desktop

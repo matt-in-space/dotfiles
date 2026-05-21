@@ -16,7 +16,7 @@
 
     "modules-left": ["custom/padd", "hyprland/workspaces", "custom/spacer", "mpris"],
     "modules-center": ["custom/l_end", "hyprland/window", "custom/r_end"],
-    "modules-right": ["pulseaudio", "network", "memory", "cpu", "battery", "idle_inhibitor", "clock", "tray", "custom/padd"],
+    "modules-right": ["pulseaudio", "network", "memory", "cpu", "battery", "idle_inhibitor", "clock", "tray", "custom/power", "custom/padd"],
 
     "hyprland/workspaces": {
         "format": "{icon}",
@@ -163,5 +163,11 @@
         "format": "  ",
         "interval": "once",
         "tooltip": false
+    },
+
+    "custom/power": {
+        "format": "",
+        "tooltip": false,
+        "on-click": "wlogout"
     }
 }

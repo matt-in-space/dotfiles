@@ -63,6 +63,7 @@ hl.bind(mainMod .. " + F", hl.dsp.exec_cmd("alacritty -e yazi"))
 hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd("wofi --show drun"))
 hl.bind(mainMod .. " + W", hl.dsp.exec_cmd("$HOME/.config/awww/wallpaper.sh"))
 hl.bind(mainMod .. " + ESCAPE", hl.dsp.exec_cmd("loginctl lock-session"))
+hl.bind(mainMod .. " + SHIFT + E", hl.dsp.exec_cmd("wlogout"))
 
 -- Screenshots
 local shot = "$HOME/.config/screenshot/screenshot.sh"

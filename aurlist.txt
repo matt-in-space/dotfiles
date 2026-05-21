@@ -4,4 +4,5 @@ gtk-engine-murrine
 paru
 paru-debug
 spotify
+wlogout
 yazi-git

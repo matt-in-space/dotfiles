@@ -20,7 +20,9 @@ hyprland
 hyprlock
 hyprpolkitagent
 imagemagick
+imv
 jq
+lib32-vulkan-radeon
 libnotify
 linux
 linux-firmware
@@ -28,6 +30,7 @@ mako
 man-db
 man-pages
 mise
+mpv
 neovim
 networkmanager
 noto-fonts
@@ -47,12 +50,15 @@ steam
 stow
 sudo
 tealdeer
+transmission-gtk
 ttf-hack-nerd
 unzip
+vulkan-radeon
 waybar
 wireplumber
 wl-clipboard
 wofi
 xdg-desktop-portal-hyprland
+zathura
 zed
 zoxide

@@ -180,3 +180,15 @@ tooltip {
     margin-right: 1px;
     padding-right: 3px;
 }
+
+#custom-power {
+    color: #f7768e;
+    font-weight: normal;
+    font-size: 18px;
+    padding: 0 8px;
+    transition: color 0.2s ease;
+}
+
+#custom-power:hover {
+    color: #bb9af7;
+}
