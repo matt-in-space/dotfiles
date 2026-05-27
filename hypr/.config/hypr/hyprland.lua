@@ -41,6 +41,7 @@ hl.on("hyprland.start", function()
 	hl.exec_cmd("$HOME/.config/awww/wallpaper.sh")
 	hl.exec_cmd("hypridle")
 	hl.exec_cmd("systemctl --user start hyprpolkitagent")
+	hl.exec_cmd("dbus-update-activation-environment --systemd --all")
 	hl.exec_cmd("blueman-applet")
 end)
 
@@ -98,6 +99,12 @@ hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
 -----------------------
 
 hl.config({
+	input = {
+		-- Use Caps Lock as the XKB Compose key.
+		-- e.g. Caps + o + o -> "°", Caps + - + - + - -> "—", Caps + ' + e -> "é"
+		kb_options = "compose:caps",
+	},
+
 	general = {
 		gaps_in          = 5,
 		gaps_out         = 20,

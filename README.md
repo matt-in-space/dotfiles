@@ -87,3 +87,28 @@ Mod = `Super`. Defined in `hypr/.config/hypr/hyprland.lua`.
 - **`hyprctl` from a non-Hyprland shell** (e.g. inside `su -`) fails with
   `HYPRLAND_INSTANCE_SIGNATURE not set!`. Run it from a terminal inside
   the Hyprland session, or export the signature from `/run/user/1000/hypr/`.
+
+## Keyring (gnome-keyring)
+
+Secret storage for firefox passwords, NetworkManager VPN secrets, `gh auth`,
+`secret-tool`, etc. Daemon starts at TTY login via PAM and auto-unlocks with
+the user password — these `/etc/pam.d/` edits aren't tracked in this repo
+(root-owned, low-churn), so re-apply them on a fresh install:
+
+`/etc/pam.d/login` — append:
+```
+auth     optional  pam_gnome_keyring.so
+session  optional  pam_gnome_keyring.so auto_start
+```
+
+`/etc/pam.d/passwd` — append (keeps keyring password in sync with user password):
+```
+password optional pam_gnome_keyring.so
+```
+
+Verify after a fresh TTY login + Hyprland start:
+```sh
+env | grep -E 'SSH_AUTH_SOCK|GNOME_KEYRING_CONTROL'   # both set
+secret-tool store --label=test foo bar                # no prompt
+secret-tool lookup foo bar                            # prints the value
+```

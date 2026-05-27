@@ -7,8 +7,35 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "project_panel": {
+    "dock": "right"
+  },
+  "outline_panel": {
+    "dock": "right"
+  },
+  "collaboration_panel": {
+    "dock": "right"
+  },
+  "git_panel": {
+    "dock": "right"
+  },
+  "buffer_font_family": "Hack Nerd Font Mono",
+  "edit_predictions": {
+    "provider": "zed"
+  },
+  "go_to_definition_fallback": "none",
+  "agent_servers": {
+    "claude-acp": {
+      "type": "registry",
+      "default_mode": "plan"
+    }
+  },
   "agent": {
-    "default_profile": "ask",
+    "dock": "left",
+    "tool_permissions": {
+      "default": "allow"
+    },
+    "default_profile": "write",
     "model_parameters": []
   },
   "buffer_font_size": 14,
@@ -21,9 +48,6 @@
     "mode": "system",
     "light": "Tokyo Night Light",
     "dark": "Tokyo Night Storm"
-  },
-  "features": {
-    "edit_prediction_provider": "zed"
   },
   "languages": {
     "Ruby": {
@@ -49,5 +73,5 @@
       }
     }
   },
-  "relative_line_numbers": true
+  "relative_line_numbers": "enabled"
 }

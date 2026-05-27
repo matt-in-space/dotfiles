@@ -13,6 +13,7 @@ fish
 fzf
 git
 github-cli
+gnome-keyring
 gnome-themes-extra
 grim
 hypridle

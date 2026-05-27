@@ -3,3 +3,4 @@ if status is-interactive
 end
 
 alias qq="exit"
+alias update-all="paru -Syu"
