@@ -1,6 +1,11 @@
 bibata-cursor-theme-bin
 claude-code
+exercism
+faugus-launcher
+google-chrome
 gtk-engine-murrine
+hyprwhspr
+opencode-bin
 paru
 paru-debug
 spotify

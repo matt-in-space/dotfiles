@@ -1,4 +1,9 @@
 [Default Applications]
+# Default browser
+text/html=firefox.desktop
+x-scheme-handler/http=firefox.desktop
+x-scheme-handler/https=firefox.desktop
+
 # Custom URL scheme handlers
 x-scheme-handler/claude-cli=claude-code-url-handler.desktop
 
@@ -39,3 +44,6 @@ audio/x-m4a=mpv.desktop
 audio/opus=mpv.desktop
 audio/x-vorbis+ogg=mpv.desktop
 audio/x-flac=mpv.desktop
+x-scheme-handler/readest=readest-handler.desktop
+x-scheme-handler/com.googleusercontent.apps.209390247301-ctpmep68ppfa56r1b8tr35e4qi4p60kq=readest-handler.desktop
+x-scheme-handler/readest-onedrive=readest-handler.desktop

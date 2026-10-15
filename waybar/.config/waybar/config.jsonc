@@ -22,17 +22,22 @@
     "custom/r_end"
   ],
   "modules-right": [
+    "custom/updates",
+    "custom/spacer",
     "pulseaudio",
     "network",
+    "bluetooth",
+    "custom/hyprwhspr",
+    "custom/spacer",
     "memory",
     "cpu",
     "battery",
     "idle_inhibitor",
     "clock",
+    "custom/spacer",
     "tray",
     "custom/power",
-    "custom/padd",
-    "custom/hyprwhspr"
+    "custom/padd"
   ],
   "hyprland/workspaces": {
     "format": "{icon}",
@@ -168,18 +173,38 @@
     "on-click": "pavucontrol",
     "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
     "format-icons": {
-      "headphone": "",
-      "hands-free": "",
-      "headset": "",
+      "headphone": "\udb80\udecb",
+      "hands-free": "\udb80\udecb",
+      "headset": "\udb80\udecb",
       "phone": "",
       "portable": "",
       "car": "",
       "default": [
-        "",
-        "",
-        ""
+        "\udb81\udd7f",
+        "\udb81\udd80",
+        "\udb81\udd7e"
       ]
     }
+  },
+  "bluetooth": {
+    "format": "{icon}",
+    "format-icons": {
+      "enabled": "\udb80\udcaf",
+      "disabled": "\udb80\udcb0",
+      "connected": "\udb80\udcb1"
+    },
+    "tooltip-format": "{controller_alias}",
+    "tooltip-format-connected": "{controller_alias}\nConnected: {device_alias}",
+    "on-click": "blueman-manager",
+    "on-click-right": "rfkill toggle bluetooth"
+  },
+  "custom/updates": {
+    "exec": "~/.config/waybar/scripts/updates.sh",
+    "return-type": "json",
+    "interval": 1800,
+    "format": "\udb81\udc50 {}",
+    "on-click": "alacritty -e fish -ic 'evolve; read -P \"Press enter to close...\"'",
+    "signal": 8
   },
   "tray": {
     "icon-size": 16,
@@ -187,7 +212,8 @@
     "spacing": 3
   },
   "custom/spacer": {
-    "format": "|"
+    "format": "\u2502",
+    "tooltip": false
   },
   "custom/l_end": {
     "format": " ",
