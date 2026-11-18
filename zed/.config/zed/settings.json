@@ -22,6 +22,7 @@
     "dock": "right",
   },
   "git_panel": {
+    "tree_view": false,
     "dock": "right",
   },
   "buffer_font_family": "Hack Nerd Font Mono",
@@ -31,6 +32,10 @@
   "go_to_definition_fallback": "none",
   "agent_servers": {
     "claude-acp": {
+      "default_config_options": {
+        "mode": "default",
+        "model": "sonnet"
+      },
       "type": "registry"
     },
     "opencode": {

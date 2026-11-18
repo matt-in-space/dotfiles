@@ -101,6 +101,13 @@ hl.config({
 		kb_options = "compose:caps",
 	},
 
+	cursor = {
+		-- Hardware cursor went invisible on amdgpu (RX 570) after the 2026-11-16
+		-- update (linux 7.3.4 / mesa 26.2.7 / Hyprland 0.57.2). Software cursor works.
+		-- Try removing this after future kernel/Hyprland updates.
+		no_hardware_cursors = true,
+	},
+
 	general = {
 		gaps_in          = 5,
 		gaps_out         = 20,
